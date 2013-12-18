@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Mashup - Laboration 3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <title>Trafikkartan</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3 class="text-muted">ma222uw - 1DV449</h3>
+        </div>
+
+        <div class="jumbotron">
+            <h1>Trafikkartan</h1>
+            <p class="lead">Se vad som händer i trafiken med SR's senaste trafikinfo</p>
+            <!--<p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>-->
+            <div id="map-canvas"></div>
+            <h3>Visa kategori</h3>
+            <select id="selectCategory">
+                <option value="4" selected="selected">Alla</option>
+                <option value="0">Vägtrafik</option>
+                <option value="1">Kollektivtrafik</option>
+                <option value="2">Planerad störning</option>
+                <option value="3">Övrigt</option>
+            </select>
+            <div id="messages"></div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; Martin Åhlin 2013</p>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXrAJz6aJnc0WPeho2nikhk9X2u3OuLW0&sensor=false"></script>
+    <script src="js/SRTrafik.js"></script>
+</body>
+</html>

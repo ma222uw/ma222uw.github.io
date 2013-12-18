@@ -1,0 +1,93 @@
+﻿#map-canvas {
+max-width: 700px;
+height: 500px;
+margin: 0 auto;
+width: 100%;
+}
+
+.trafficMessage {
+background: #ccc;
+padding: 5px 20px;
+margin: 15px auto;
+text-align: left;
+max-width: 700px;
+}
+
+.trafficDate {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.trafficCategory {
+float: right;
+color: #1C6CE5;
+line-height: 1em;
+margin: 15px 0 0;
+}
+
+.trafficSubCategory {
+    float: right;
+    margin-left: 10px;
+    color: #56709E;
+    clear: right;
+    font-size: 15px;
+}
+
+.trafficDescription {
+    display: block;
+    clear: left;
+}
+
+.trafficPriority {
+    display: inline-block;
+}
+
+.incident {
+    width: 24px;
+    height: 24px;
+}
+
+.verySeriousIncident {
+    background-image: url(images/priority1.jpg);
+}
+.SeriousIncident {
+    background-image: url(images/priority2.jpg);
+}
+.disruption {
+    background-image: url(images/priority3.jpg);
+}
+.information {
+    background-image: url(images/priority4.jpg);
+}
+.minorDisruption {
+    background-image: url(images/priority5.jpg);
+}
+
+.trafficHeader {
+display: inline-block;
+margin-left: 15px;
+}
+
+.markerInfo .trafficCategory {
+float: none;
+display: inline-block;
+margin-top: 0;
+}
+
+.markerInfo .trafficSubCategory {
+float: none;
+display: inline-block;
+}
+
+.markerInfo .trafficHeader {
+margin: 10px 0 0;
+}
+
+.markerInfo .trafficPriority {
+margin: 0 8px -3px 0px;
+}
+
+.markerInfo .markerDate {
+margin: -4px 0;
+}
