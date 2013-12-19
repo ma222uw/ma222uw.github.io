@@ -67,7 +67,7 @@ trappen.displayMessages = function (messages) {
         $("#messages").html("<h3>Inga trafikhändelser att visa.</h3>");
         return; //avbryt
     }
-    $("#messages").html("").append("<div class='trafficDate'>Hämtat " + trappen.dateToHtml(messages[0].createddate) + "</div>");
+    $("#messages").html("");
     //Html-kod för varje message.
     messages.forEach(function (message) {
         $("#messages").append("<div class='trafficMessage'><div class='trafficCategory'>" +
@@ -75,7 +75,8 @@ trappen.displayMessages = function (messages) {
             "</div><div class='trafficSubCategory'>" +
             message.subcategory + "</div><div class='trafficPriority'>" +
             trappen.priorityToHtml(message.priority) + "</div><h3 class='trafficHeader'>" + message.title +
-            "</h3><p class='trafficDescription'>" + message.description + "</p></div>");
+            "</h3><div class='trafficDate'>" + trappen.dateToHtml(message.createddate) + 
+            "</div><p class='trafficDescription'>" + message.description + "</p></div>");
     });
 }
 
