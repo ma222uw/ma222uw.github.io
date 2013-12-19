@@ -2,6 +2,7 @@
 var trappen = trappen || {};
 
 //----------------Options-----------------
+trappen.currentDate = new Date();
 trappen.timeOptions = { hour: "2-digit", minute: "2-digit" };
 trappen.dateOptions = { year: "numeric", month: "2-digit", day: "2-digit" };
 
@@ -91,7 +92,7 @@ trappen.getMarkerHtml = function (message) {
 trappen.dateToHtml = function (dateString) {
     //Parsa datumet
     try {
-        trappen.currentDate = new Date(Date(dateString.slice(6, -7)));
+        trappen.currentDate.setTime(dateString.slice(6, -7));
         return "kl " + trappen.currentDate.toLocaleTimeString("sv-SE", trappen.timeOptions) + ", " +
         trappen.currentDate.toLocaleDateString("sv-SE", trappen.dateOptions);
     } catch (e) {
